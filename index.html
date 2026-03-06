@@ -5,124 +5,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sourendu Saha | Portfolio</title>
+<title>Sourendu Saha | AI Engineer</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <style>
+
 body{
-background:#0f172a;
+background: radial-gradient(circle at 30% 20%, #1e293b, #020617);
 color:white;
+font-family: 'Segoe UI', sans-serif;
 }
 
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
+.glass{
+backdrop-filter: blur(15px);
+background: rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
 }
+
+.glow{
+box-shadow:0 0 30px rgba(99,102,241,0.4);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 glass px-8 py-3 rounded-full flex gap-6 z-50">
 
-<nav class="flex justify-between p-6">
-<h1 class="text-xl font-bold">Sourendu</h1>
-<div class="space-x-6">
 <a href="#about">About</a>
+<a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
-</div>
+
+<a class="bg-indigo-600 px-4 py-1 rounded-full">Resume</a>
+
 </nav>
 
-<section class="h-screen flex flex-col justify-center items-center text-center">
 
-<h1 class="text-5xl font-bold mb-4">Sourendu Saha</h1>
+<section class="h-screen flex items-center justify-center">
 
-<span id="typing" class="text-xl text-blue-400"></span>
+<div class="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
 
-<div class="mt-6 space-x-4">
-<a href="https://github.com/SourenduSaha" class="px-6 py-2 bg-blue-500 rounded">GitHub</a>
+<div>
+
+<h1 class="text-6xl font-light mb-6">Sourendu Saha</h1>
+
+<h2 class="text-3xl text-indigo-400 mb-6">What I Do</h2>
+
+<p class="text-gray-300 leading-relaxed">
+
+Build production-grade AI systems from data pipelines to deployed ML workflows at scale.
+
+Design LLM-powered applications including RAG pipelines, monitoring layers, and evaluation frameworks.
+
+Engineer machine learning systems including forecasting, anomaly detection, and NLP pipelines handling millions of records.
+
+</p>
+
+</div>
+
+<div class="flex justify-center">
+
+<img src="profile.jpg" class="rounded-xl glow w-80">
+
+</div>
+
 </div>
 
 </section>
 
-<section id="about" class="max-w-4xl mx-auto py-20" data-aos="fade-up">
 
-<h2 class="text-3xl mb-4">About</h2>
+<section id="about" class="py-24 max-w-5xl mx-auto text-center" data-aos="fade-up">
 
-<p>
-Machine learning engineer interested in AI systems, predictive modeling,
-and building scalable ML pipelines.
+<h2 class="text-4xl mb-8 text-indigo-400">About Me</h2>
+
+<p class="text-gray-300 leading-relaxed">
+
+Production-focused AI Engineer and Data Scientist specializing in scalable machine learning systems,
+large-scale statistical modeling, and cloud-native AI architectures.
+
+Currently pursuing MS in Applied Data Science at University of Chicago.
+
 </p>
 
 </section>
 
-<section id="projects" class="max-w-5xl mx-auto py-20">
 
-<h2 class="text-3xl mb-10 text-center">Projects</h2>
+<section id="skills" class="py-24 text-center">
 
-<div class="grid md:grid-cols-3 gap-6">
+<h2 class="text-4xl mb-16 text-indigo-400">Skills & Technologies</h2>
 
-<div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up">
-<h3 class="text-xl mb-2">ML Prediction Model</h3>
-<p>Predictive model built with Python.</p>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-10 max-w-5xl mx-auto">
+
+<div class="glass p-6 rounded-xl glow">Python</div>
+<div class="glass p-6 rounded-xl glow">TensorFlow</div>
+<div class="glass p-6 rounded-xl glow">PyTorch</div>
+<div class="glass p-6 rounded-xl glow">LangChain</div>
+<div class="glass p-6 rounded-xl glow">XGBoost</div>
+<div class="glass p-6 rounded-xl glow">SQL</div>
+
 </div>
 
-<div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up">
-<h3 class="text-xl mb-2">Deep Learning Project</h3>
-<p>Neural network model.</p>
+</section>
+
+
+<section id="projects" class="py-24 max-w-6xl mx-auto">
+
+<h2 class="text-4xl text-center mb-16 text-indigo-400">Projects</h2>
+
+<div class="swiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide glass p-8 rounded-xl">
+<h3 class="text-xl mb-4">PRISM Interview AI</h3>
+<p>Multimodal AI mock interview system using RAG and GPT-4o embeddings.</p>
 </div>
 
-<div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up">
-<h3 class="text-xl mb-2">Data Analysis Dashboard</h3>
-<p>Data visualization using Python.</p>
+<div class="swiper-slide glass p-8 rounded-xl">
+<h3 class="text-xl mb-4">Pneumonia Detection</h3>
+<p>Uncertainty-aware deep learning pipeline using DenseNet and Bayesian networks.</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="contact" class="text-center py-20">
 
-<h2 class="text-3xl mb-4">Contact</h2>
+<section id="experience" class="py-24 max-w-5xl mx-auto text-center">
 
-<p>sourendu95@gmail.com</p>
+<h2 class="text-4xl mb-16 text-indigo-400">Education & Experience</h2>
+
+<div class="glass p-8 rounded-xl mb-6">
+
+<h3 class="text-xl">Machine Learning Intern — iQuanti</h3>
+<p>Jun 2025 – Aug 2025</p>
+
+</div>
+
+<div class="glass p-8 rounded-xl">
+
+<h3 class="text-xl">Data Scientist — Dentsu</h3>
+<p>Jun 2022 – Aug 2024</p>
+
+</div>
 
 </section>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<section id="contact" class="py-24 text-center">
+
+<h2 class="text-4xl mb-8 text-indigo-400">Contact</h2>
+
+<p>sourendusaha195@uchicago.edu</p>
+
+</section>
 
 <script>
 
 AOS.init();
 
-var typed = new Typed("#typing",{
-strings:[
-"Data Scientist",
-"Machine Learning Engineer",
-"AI Enthusiast"
-],
-typeSpeed:50,
-backSpeed:30,
-loop:true
-});
-
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-move:{speed:2},
-line_linked:{enable:true}
-}
+new Swiper('.swiper', {
+slidesPerView:1,
+spaceBetween:30,
+loop:true,
+autoplay:{delay:3000}
 });
 
 </script>
