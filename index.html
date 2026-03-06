@@ -12,9 +12,9 @@
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
 <style>
 
@@ -32,9 +32,18 @@ font-family: 'Inter', sans-serif;
 100%{background-position:0% 50%;}
 }
 
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+}
+
 .glass{
 background: rgba(255,255,255,0.05);
-backdrop-filter: blur(15px);
+backdrop-filter: blur(12px);
 border:1px solid rgba(255,255,255,0.1);
 }
 
@@ -52,7 +61,7 @@ transition:0.3s;
 
 .skill img{
 margin:auto;
-filter:drop-shadow(0 0 15px rgba(99,102,241,0.7));
+filter:drop-shadow(0 0 15px rgba(99,102,241,0.8));
 }
 
 .skill:hover{
@@ -67,11 +76,21 @@ background:#6366f1;
 height:100%;
 }
 
+.project-card{
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
 </style>
 
 </head>
 
 <body>
+
+<div id="particles-js"></div>
 
 <nav class="nav glass px-8 py-3 rounded-full flex gap-6 z-50">
 
@@ -79,13 +98,11 @@ height:100%;
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#experience">Experience</a>
-<a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
 
 <a class="bg-indigo-600 px-4 py-1 rounded-full">Resume</a>
 
 </nav>
-
 
 <section class="h-screen flex items-center justify-center">
 
@@ -99,8 +116,8 @@ height:100%;
 
 <p class="mt-6 text-gray-300">
 
-Production-focused AI Engineer building scalable machine learning systems,
-LLM pipelines, and cloud-native AI architectures.
+Production-focused AI Engineer building scalable machine learning
+systems, LLM pipelines, and data driven products.
 
 </p>
 
@@ -123,13 +140,10 @@ LLM pipelines, and cloud-native AI architectures.
 
 <p class="text-gray-300 leading-relaxed">
 
-AI Engineer and Data Scientist specializing in statistical modeling,
-machine learning systems, and scalable cloud-based AI infrastructure.
+AI Engineer specializing in scalable ML systems, statistical modeling,
+and cloud-native AI pipelines.
 
-Currently pursuing MS in Applied Data Science at the University of Chicago.
-
-Previously worked as a Data Scientist building demand forecasting
-and optimization models for enterprise clients.
+Currently pursuing MS in Applied Data Science at University of Chicago.
 
 </p>
 
@@ -142,17 +156,35 @@ and optimization models for enterprise clients.
 
 <div class="grid grid-cols-3 md:grid-cols-6 gap-10 max-w-5xl mx-auto">
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60"><p>Python</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60">
+<p>Python</p>
+</div>
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="60"><p>TensorFlow</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="60">
+<p>TensorFlow</p>
+</div>
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="60"><p>PyTorch</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="60">
+<p>PyTorch</p>
+</div>
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60"><p>JavaScript</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60">
+<p>Docker</p>
+</div>
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60"><p>Docker</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="60">
+<p>SQL</p>
+</div>
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="60"><p>MySQL</p></div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60">
+<p>JavaScript</p>
+</div>
 
 </div>
 
@@ -161,38 +193,11 @@ and optimization models for enterprise clients.
 
 <section id="projects" class="py-24 max-w-6xl mx-auto">
 
-<h2 class="text-4xl text-center mb-16 text-indigo-400">Projects</h2>
+<h2 class="text-4xl text-center mb-16 text-indigo-400">
+Projects
+</h2>
 
-<div class="swiper">
-
-<div class="swiper-wrapper">
-
-<div class="swiper-slide glass p-8 rounded-xl">
-
-<h3 class="text-xl mb-4">PRISM AI Interview System</h3>
-
-<p>
-Multimodal AI system integrating RAG pipelines and LLM orchestration
-to simulate technical interviews and generate automated feedback.
-</p>
-
-</div>
-
-
-<div class="swiper-slide glass p-8 rounded-xl">
-
-<h3 class="text-xl mb-4">Pneumonia Detection</h3>
-
-<p>
-Uncertainty-aware deep learning model using DenseNet and Bayesian
-networks to improve reliability of medical predictions.
-</p>
-
-</div>
-
-</div>
-
-</div>
+<div id="github-projects" class="grid md:grid-cols-3 gap-8"></div>
 
 </section>
 
@@ -210,11 +215,9 @@ Education and Experience
 <div class="mb-12 flex justify-between items-center">
 
 <div class="w-5/12 glass p-6 rounded-xl">
-
 <h3>Machine Learning Intern</h3>
 <p>iQuanti</p>
-<p>Jun 2025 – Aug 2025</p>
-
+<p>2025</p>
 </div>
 
 <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
@@ -222,7 +225,6 @@ Education and Experience
 <div class="w-5/12"></div>
 
 </div>
-
 
 <div class="mb-12 flex justify-between items-center">
 
@@ -231,62 +233,22 @@ Education and Experience
 <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
 
 <div class="w-5/12 glass p-6 rounded-xl">
-
 <h3>Research Assistant</h3>
 <p>University of Chicago Booth</p>
-<p>Dec 2024 – Present</p>
-
 </div>
 
 </div>
-
 
 <div class="mb-12 flex justify-between items-center">
 
 <div class="w-5/12 glass p-6 rounded-xl">
-
 <h3>Data Scientist</h3>
 <p>Dentsu</p>
-<p>Jun 2022 – Aug 2024</p>
-
 </div>
 
 <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
 
 <div class="w-5/12"></div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="certifications" class="py-24">
-
-<h2 class="text-center text-4xl mb-16 text-indigo-400">
-Certifications
-</h2>
-
-<div class="swiper certSlider max-w-5xl mx-auto">
-
-<div class="swiper-wrapper">
-
-<div class="swiper-slide glass p-6 rounded-xl text-center">
-
-<img src="cert1.png" class="mb-4">
-
-<p>Transformer Models and BERT</p>
-
-</div>
-
-<div class="swiper-slide glass p-6 rounded-xl text-center">
-
-<img src="cert2.png" class="mb-4">
-
-<p>Generative AI Architecture</p>
-
-</div>
 
 </div>
 
@@ -298,7 +260,7 @@ Certifications
 <section class="py-24">
 
 <h2 class="text-center text-4xl mb-12 text-indigo-400">
-What People Say
+Testimonials
 </h2>
 
 <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -306,8 +268,7 @@ What People Say
 <div class="glass p-8 rounded-xl">
 
 <p>
-"Sourendu builds reliable production-grade machine learning systems
-and consistently delivers high-quality AI solutions."
+"Sourendu consistently builds scalable and reliable AI systems."
 </p>
 
 </div>
@@ -315,8 +276,7 @@ and consistently delivers high-quality AI solutions."
 <div class="glass p-8 rounded-xl">
 
 <p>
-"Strong ML engineer with deep understanding of scalable data systems
-and modern AI pipelines."
+"Strong machine learning engineer with excellent system design."
 </p>
 
 </div>
@@ -328,7 +288,9 @@ and modern AI pipelines."
 
 <section id="contact" class="py-24 text-center">
 
-<h2 class="text-4xl mb-8 text-indigo-400">Contact Me</h2>
+<h2 class="text-4xl mb-8 text-indigo-400">
+Contact Me
+</h2>
 
 <div class="flex justify-center gap-8 text-3xl">
 
@@ -342,8 +304,6 @@ and modern AI pipelines."
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
 
@@ -361,15 +321,70 @@ backSpeed:30,
 loop:true
 });
 
-new Swiper('.swiper', {
-slidesPerView:1,
-spaceBetween:30,
-loop:true,
-autoplay:{delay:3000}
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+color:{value:"#6366f1"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+line_linked:{
+enable:true,
+distance:150,
+color:"#6366f1",
+opacity:0.4,
+width:1
+},
+move:{
+enable:true,
+speed:2
+}
+},
+interactivity:{
+events:{
+onhover:{enable:true,mode:"grab"}
+},
+modes:{
+grab:{distance:140,line_linked:{opacity:1}}
+}
+}
 });
+
+
+async function loadProjects(){
+
+const response = await fetch("https://api.github.com/users/SourenduSaha/repos");
+const repos = await response.json();
+
+const container = document.getElementById("github-projects");
+
+repos
+.filter(repo => !repo.fork)
+.slice(0,6)
+.forEach(repo => {
+
+const card = document.createElement("div");
+
+card.className="glass project-card p-6 rounded-xl";
+
+card.innerHTML = `
+<h3 class="text-xl mb-3">${repo.name}</h3>
+<p class="text-gray-300 mb-4">${repo.description || "Machine learning project"}</p>
+<a href="${repo.html_url}" target="_blank" class="text-indigo-400">
+View Repository →
+</a>
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+loadProjects();
 
 </script>
 
 </body>
-
 </html>
