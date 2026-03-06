@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sourendu Saha | AI Engineer</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -17,19 +19,34 @@
 <style>
 
 body{
-background: radial-gradient(circle at 30% 20%, #1e293b, #020617);
+background: radial-gradient(circle at 20% 20%, #1e293b, #020617);
 color:white;
-font-family: 'Segoe UI', sans-serif;
+font-family: 'Inter', sans-serif;
 }
 
 .glass{
-backdrop-filter: blur(15px);
 background: rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(15px);
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .glow{
-box-shadow:0 0 30px rgba(99,102,241,0.4);
+box-shadow:0 0 40px rgba(99,102,241,0.3);
+}
+
+.nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.skill{
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-8px);
 }
 
 </style>
@@ -38,7 +55,7 @@ box-shadow:0 0 30px rgba(99,102,241,0.4);
 
 <body>
 
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 glass px-8 py-3 rounded-full flex gap-6 z-50">
+<nav class="nav glass px-8 py-3 rounded-full flex gap-6 z-50">
 
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
@@ -57,17 +74,17 @@ box-shadow:0 0 30px rgba(99,102,241,0.4);
 
 <div>
 
-<h1 class="text-6xl font-light mb-6">Sourendu Saha</h1>
+<h1 class="text-6xl mb-6">Sourendu Saha</h1>
 
 <h2 class="text-3xl text-indigo-400 mb-6">What I Do</h2>
 
 <p class="text-gray-300 leading-relaxed">
 
-Build production-grade AI systems from data pipelines to deployed ML workflows at scale.
+Build production-grade AI systems from data pipelines to deployed ML workflows used at scale.
 
-Design LLM-powered applications including RAG pipelines, monitoring layers, and evaluation frameworks.
+Design agentic AI workflows and LLM powered systems including RAG pipelines and evaluation frameworks.
 
-Engineer machine learning systems including forecasting, anomaly detection, and NLP pipelines handling millions of records.
+Engineer scalable machine learning systems including forecasting, anomaly detection, and NLP pipelines.
 
 </p>
 
@@ -90,10 +107,12 @@ Engineer machine learning systems including forecasting, anomaly detection, and 
 
 <p class="text-gray-300 leading-relaxed">
 
-Production-focused AI Engineer and Data Scientist specializing in scalable machine learning systems,
-large-scale statistical modeling, and cloud-native AI architectures.
+Production-focused AI Engineer specializing in scalable ML architectures, statistical modeling, and
+cloud-native AI systems.
 
-Currently pursuing MS in Applied Data Science at University of Chicago.
+Currently pursuing MS in Applied Data Science at the University of Chicago.
+
+Previously built demand forecasting, anomaly detection, and optimization models at enterprise scale.
 
 </p>
 
@@ -102,16 +121,22 @@ Currently pursuing MS in Applied Data Science at University of Chicago.
 
 <section id="skills" class="py-24 text-center">
 
-<h2 class="text-4xl mb-16 text-indigo-400">Skills & Technologies</h2>
+<h2 class="text-4xl mb-16 text-indigo-400">Skills and Technologies</h2>
 
 <div class="grid grid-cols-3 md:grid-cols-6 gap-10 max-w-5xl mx-auto">
 
-<div class="glass p-6 rounded-xl glow">Python</div>
-<div class="glass p-6 rounded-xl glow">TensorFlow</div>
-<div class="glass p-6 rounded-xl glow">PyTorch</div>
-<div class="glass p-6 rounded-xl glow">LangChain</div>
-<div class="glass p-6 rounded-xl glow">XGBoost</div>
-<div class="glass p-6 rounded-xl glow">SQL</div>
+<div class="glass skill p-6 rounded-xl glow">Python</div>
+<div class="glass skill p-6 rounded-xl glow">TensorFlow</div>
+<div class="glass skill p-6 rounded-xl glow">PyTorch</div>
+<div class="glass skill p-6 rounded-xl glow">LangChain</div>
+<div class="glass skill p-6 rounded-xl glow">XGBoost</div>
+<div class="glass skill p-6 rounded-xl glow">SQL</div>
+<div class="glass skill p-6 rounded-xl glow">BigQuery</div>
+<div class="glass skill p-6 rounded-xl glow">Vertex AI</div>
+<div class="glass skill p-6 rounded-xl glow">Spark</div>
+<div class="glass skill p-6 rounded-xl glow">Docker</div>
+<div class="glass skill p-6 rounded-xl glow">MLflow</div>
+<div class="glass skill p-6 rounded-xl glow">Tableau</div>
 
 </div>
 
@@ -127,13 +152,26 @@ Currently pursuing MS in Applied Data Science at University of Chicago.
 <div class="swiper-wrapper">
 
 <div class="swiper-slide glass p-8 rounded-xl">
+
 <h3 class="text-xl mb-4">PRISM Interview AI</h3>
-<p>Multimodal AI mock interview system using RAG and GPT-4o embeddings.</p>
+
+<p>
+Multimodal generative AI system integrating GPT-4o embeddings and RAG pipelines
+to generate domain specific interview simulations.
+</p>
+
 </div>
 
+
 <div class="swiper-slide glass p-8 rounded-xl">
-<h3 class="text-xl mb-4">Pneumonia Detection</h3>
-<p>Uncertainty-aware deep learning pipeline using DenseNet and Bayesian networks.</p>
+
+<h3 class="text-xl mb-4">Pneumonia Detection with Uncertainty</h3>
+
+<p>
+Deep learning pipeline using DenseNet-121 and Bayesian networks
+to quantify predictive uncertainty and improve clinical reliability.
+</p>
+
 </div>
 
 </div>
@@ -145,12 +183,19 @@ Currently pursuing MS in Applied Data Science at University of Chicago.
 
 <section id="experience" class="py-24 max-w-5xl mx-auto text-center">
 
-<h2 class="text-4xl mb-16 text-indigo-400">Education & Experience</h2>
+<h2 class="text-4xl mb-16 text-indigo-400">Education and Experience</h2>
 
 <div class="glass p-8 rounded-xl mb-6">
 
 <h3 class="text-xl">Machine Learning Intern — iQuanti</h3>
 <p>Jun 2025 – Aug 2025</p>
+
+</div>
+
+<div class="glass p-8 rounded-xl mb-6">
+
+<h3 class="text-xl">Research Assistant — University of Chicago Booth</h3>
+<p>Dec 2024 – Dec 2025</p>
 
 </div>
 
@@ -166,11 +211,17 @@ Currently pursuing MS in Applied Data Science at University of Chicago.
 
 <section id="contact" class="py-24 text-center">
 
-<h2 class="text-4xl mb-8 text-indigo-400">Contact</h2>
+<h2 class="text-4xl mb-8 text-indigo-400">Contact Me</h2>
 
-<p>sourendusaha195@uchicago.edu</p>
+<p class="text-gray-300">sourendusaha195@uchicago.edu</p>
+
+<p class="mt-4">
+<a href="https://github.com/SourenduSaha">GitHub</a> |
+<a href="https://linkedin.com">LinkedIn</a>
+</p>
 
 </section>
+
 
 <script>
 
@@ -186,4 +237,5 @@ autoplay:{delay:3000}
 </script>
 
 </body>
+
 </html>
